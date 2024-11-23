@@ -1,0 +1,211 @@
+/* Estilo general */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0f0f0f; /* Fondo negro */
+    color: #fefefe; /* Texto blanco */
+}
+
+/* Barra de navegación */
+.navbar {
+    background-color: #ff4655; /* Rojo Valorant */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    color: #fefefe; /* Blanco */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar ul li a:hover {
+    color: #0f0f0f; /* Negro */
+}
+
+/* Contenido central */
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px auto;
+    width: 80%;
+}
+
+.image-text-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.image-container img {
+    width: 400px; /* 10% más grande */
+    height: auto; /* Mantiene la proporción */
+    display: block; /* Elimina el espacio extra alrededor */
+    margin: 0 auto; /* Centra la imagen */
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Animación suave */
+}
+
+
+.text-container {
+    max-width: 500px;
+}
+
+.text-container h2 {
+    font-size: 24px;
+    color: #ff4655; /* Rojo Valorant */
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.text-container p {
+    font-size: 16px;
+    line-height: 1.6;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Contenedor del slider */
+.slider {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Botones del slider (imágenes cuadradas) */
+.slider-button {
+    width: 60px;
+    height: 60px;
+    border: 3px solid #0f0f0f; /* Negro */
+    border-radius: 5px; /* Cuadrados */
+    object-fit: cover; /* Asegura que la imagen se ajuste correctamente */
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+/* Efecto hover */
+.slider-button:hover {
+    border-color: #ff4655; /* Rojo */
+}
+
+/* Botón seleccionado (agrandado y destacado) */
+.slider-button.selected {
+    transform: scale(1.3); /* Agranda el botón seleccionado */
+    border-color: #ff4655; /* Rojo */
+}
+
+/* Contenedor de imágenes adicionales */
+.image-row {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+/* Imágenes de la galería */
+.gallery-image {
+    width: 100px; /* Tamaño fijo */
+    height: auto; /* Mantener proporciones */
+    border-radius: 5px; /* Bordes suaves */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Efecto hover en las imágenes de la galería */
+.gallery-image:hover {
+    transform: scale(1.1); /* Agranda ligeramente la imagen */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.image-container img.animate {
+    transform: scale(1.1); /* Aumenta su tamaño temporalmente al cambiar */
+    opacity: 0.8; /* Efecto visual de transición */
+}
+
+.text-container.animate {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Media Queries */
+
+/* Tablets (pantallas entre 600px y 1024px) */
+@media (max-width: 1024px) {
+    .image-container img {
+        width: 300px; /* Ajustar tamaño en tablets */
+    }
+
+    .text-container {
+        max-width: 90%; /* Reducir ancho del texto */
+    }
+
+    .gallery-image {
+        width: 80px; /* Reducir tamaño de las imágenes de la galería */
+    }
+
+    .slider-button {
+        width: 50px; /* Botones más pequeños */
+        height: 50px;
+    }
+}
+
+/* Celulares (pantallas de 600px o menos) */
+@media (max-width: 600px) {
+    .navbar ul {
+        flex-direction: column; /* Navegación vertical */
+        align-items: center;
+    }
+
+    .image-text-container {
+        flex-direction: column; /* Diseño vertical */
+        gap: 10px;
+    }
+
+    .text-container {
+        max-width: 100%; /* Texto fluido */
+        text-align: center; /* Centrar texto */
+    }
+
+    .image-container img {
+        width: 100%; /* Imagen central adaptada */
+    }
+
+    .gallery-image {
+        width: 70px; /* Más pequeño en móviles */
+    }
+
+    .slider-button {
+        width: 45px; /* Botones más pequeños */
+        height: 45px;
+    }
+}
+
