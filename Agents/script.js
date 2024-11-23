@@ -4,39 +4,26 @@ const sliderData = [
         buttonImage: 'assets/buttons/1.png',
         mainImage: 'assets/main/1.webp',
         title: 'Clove',
-        text: 'Clove es un agente controlador en Valorant que se especializa en manipular el mapa y desorientar a los oponentes con precisión táctica. Su conjunto de habilidades le permite interrumpir el posicionamiento enemigo, bloquear líneas de visión y garantizar el dominio de áreas clave en cualquier situación. Diseñada para jugadores estratégicos, Clove recompensa un enfoque meticuloso y una buena lectura del mapa.',
+        text: 'Clove es una agente controladora diseñada para jugadores que buscan manipular el mapa y desorientar al equipo enemigo. Su conjunto de habilidades le permite bloquear líneas de visión, restringir movimientos y controlar áreas clave con precisión táctica.',
         gallery: [
-            { src: 'assets/icons/1/a.png', title: 'Curacion' },
-            { src: 'assets/icons/1/b.png', title: 'degradado' },
-            { src: 'assets/icons/1/c.png', title: 'smoke' },
-            { src: 'assets/icons/1/d.png', title: 'revive' }
+            { src: 'assets/icons/1/a.webp', title: 'Al activarla, recupera salud y obtiene un breve impulso de velocidad.' },
+            { src: 'assets/icons/1/b.webp', title: 'Lanza un orbe que explota afectando a todos los enemigos en el área con un estado de decaimiento.' },
+            { src: 'assets/icons/1/c.webp', title: 'Clove despliega nubes opacas en ubicaciones seleccionadas que bloquean completamente la visión.' },
+            { src: 'assets/icons/1/d.webp', title: 'Tras ser eliminada, Clove puede activar esta habilidad para regresar al combate.' }
         ]
     },
     {
         buttonImage: 'assets/buttons/2.webp',
         mainImage: 'assets/main/2.webp',
         title: 'Omen',
-        text: 'Jett es una duelista explosiva en Valorant, diseñada para jugadores que prefieren un estilo de juego agresivo y móvil. Con una velocidad inigualable y habilidades de reposicionamiento, Jett sobresale en eliminar enemigos rápidamente y retirarse antes de ser alcanzada. Es una maestra de la agilidad que premia la precisión y la creatividad en el campo de batalla.',
+        text: 'Omen es un controlador en Valorant que manipula sombras para confundir a los enemigos y dominar el campo de batalla. Su estilo de juego combina el sigilo, la movilidad y el control táctico, ideal para jugadores estratégicos.',
         gallery: [
-            { src: 'assets/icons/2/a.png', title: 'Info de la imagen 1' },
-            { src: 'assets/icons/2/b.png', title: 'Info de la imagen 2' },
-            { src: 'assets/icons/2/c.webp', title: 'Info de la imagen 3' },
-            { src: 'assets/icons/2/d.png', title: 'Info de la imagen 4' }
-        ]
-    },
-    {
-        buttonImage: 'assets/buttons/3.webp',
-        mainImage: 'assets/main/3.webp',
-        title: 'Jett',
-        text: 'Omen es un controlador único en Valorant, especializado en dominar el mapa a través del sigilo, la confusión y el posicionamiento estratégico. Su kit de habilidades está diseñado para desorientar al enemigo, bloquear líneas de visión y crear oportunidades inesperadas para su equipo. Con un enfoque en el sigilo y la movilidad, Omen recompensa a los jugadores que piensan un paso adelante en cada enfrentamiento.',
-        gallery: [
-            { src: 'assets/icons/3/a.webp', title: 'Info de la imagen 1' },
-            { src: 'assets/icons/3/b.webp', title: 'Info de la imagen 2' },
-            { src: 'assets/icons/3/c.webp', title: 'Info de la imagen 3' },
-            { src: 'assets/icons/3/d.webp', title: 'Info de la imagen 4' }
+            { src: 'assets/icons/2/a.png', title: 'Permite teletransportarse a una ubicación cercana' },
+            { src: 'assets/icons/2/b.png', title: 'Lanza un proyectil que reduce la visión y el sonido de los enemigos en su trayectoria.' },
+            { src: 'assets/icons/2/c.webp',title:'Proyecta orbes de sombra para bloquear líneas de visión.' },
+            { src: 'assets/icons/2/d.png', title: 'Teletransporta a Omen a cualquier lugar del mapa. Si es interrumpido, regresa al punto inicial.' }
         ]
     }
-    // Agregar más elementos según sea necesario
 ];
 
 // Referencias a los elementos
@@ -44,21 +31,33 @@ const mainImage = document.getElementById('main-image');
 const mainTitle = document.getElementById('main-title');
 const mainText = document.getElementById('main-text');
 const sliderContainer = document.querySelector('.slider');
-const imageRow = document.getElementById('image-row'); // Contenedor para las imágenes adicionales
+const imageRow = document.getElementById('image-row'); 
 
-let currentIndex = 0;
+let currentIndex = 0; // Comienza en el primer elemento del slider
 
 // Función para inicializar el slider
 function initializeSlider() {
     updateSliderButtons();
+    updateGallery(); // Genera las imágenes de la galería y el texto asociado
+    initializeMainContent(); // Muestra contenido inicial
+}
+
+// Función para mostrar el contenido inicial
+function initializeMainContent() {
+    const initialData = sliderData[currentIndex];
+
+    mainImage.src = initialData.mainImage;
+    mainTitle.textContent = initialData.title;
+    mainText.textContent = initialData.text;
+    updateGallery(); // Asegurarse de inicializar la galería
 }
 
 // Función para actualizar los botones visibles en el slider
 function updateSliderButtons() {
-    sliderContainer.innerHTML = ''; // Limpiar botones previos
-
+    sliderContainer.innerHTML = ''; 
+    
     const totalItems = sliderData.length;
-    const visibleButtons = 5;
+    const visibleButtons = 18;
     const startIndex = (currentIndex - 2 + totalItems) % totalItems;
 
     for (let i = 0; i < visibleButtons; i++) {
@@ -95,25 +94,40 @@ function changeContent(index) {
         mainTitle.classList.add('fade-in');
         mainText.classList.add('fade-in');
 
-        updateGallery(); // Actualizar las imágenes adicionales
+        updateGallery();
         updateSliderButtons();
     }, 500);
 }
 
-// Función para actualizar las imágenes adicionales
+// Función para actualizar las imágenes de la galería y los textos debajo
 function updateGallery() {
-    imageRow.innerHTML = ''; // Limpiar imágenes previas
+    imageRow.innerHTML = ''; 
 
     sliderData[currentIndex].gallery.forEach(item => {
+        const galleryItem = document.createElement('div');
+        galleryItem.classList.add('gallery-item');
+
+        // Imagen de la galería
         const img = document.createElement('img');
         img.src = item.src;
-        img.alt = item.title;
-        img.title = item.title; // Texto al mantener el mouse sobre la imagen
+        img.alt = item.title; 
         img.classList.add('gallery-image');
-        imageRow.appendChild(img);
+
+        // Texto debajo de la imagen
+        const text = document.createElement('div');
+        text.classList.add('gallery-text');
+        text.textContent = item.title;
+
+        // Agregar imagen y texto al contenedor
+        galleryItem.appendChild(img);
+        galleryItem.appendChild(text);
+
+        // Agregar el contenedor a la fila
+        imageRow.appendChild(galleryItem);
     });
 }
 
-// Inicializar el slider
+
+// Inicializar el slider al cargar la página
 initializeSlider();
 
