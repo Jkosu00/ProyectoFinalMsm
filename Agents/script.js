@@ -16,7 +16,7 @@ const sliderData = [
         buttonImage: 'assets/buttons/2.webp',
         mainImage: 'assets/main/2.webp',
         title: 'Omen',
-        text: 'Omen es un controlador único en Valorant, especializado en dominar el mapa a través del sigilo, la confusión y el posicionamiento estratégico. Su kit de habilidades está diseñado para desorientar al enemigo, bloquear líneas de visión y crear oportunidades inesperadas para su equipo. Con un enfoque en el sigilo y la movilidad, Omen recompensa a los jugadores que piensan un paso adelante en cada enfrentamiento.',
+        text: 'Jett es una duelista explosiva en Valorant, diseñada para jugadores que prefieren un estilo de juego agresivo y móvil. Con una velocidad inigualable y habilidades de reposicionamiento, Jett sobresale en eliminar enemigos rápidamente y retirarse antes de ser alcanzada. Es una maestra de la agilidad que premia la precisión y la creatividad en el campo de batalla.',
         gallery: [
             { src: 'assets/icons/2/a.png', title: 'Info de la imagen 1' },
             { src: 'assets/icons/2/b.png', title: 'Info de la imagen 2' },
