@@ -42,10 +42,10 @@ const sliderData = [
         title: 'Raze',
         text: 'Raze es una duelista en Valorant enfocada en causar daño masivo con explosivos. Su estilo de juego es agresivo y caótico, ideal para jugadores que disfrutan de la acción directa y la capacidad de limpiar áreas con facilidad.',
         gallery: [
-            { src: 'assets/icons/raze/Blast.png', title: 'Lanza un explosivo que puede detonar manualmente, empujando a enemigos o a Raze misma, permitiéndole reposicionarse rápidamente o acceder a lugares altos.' },
-            { src: 'assets/icons/raze/bot.png', title: 'Despliega un robot que busca enemigos cercanos y explota al alcanzarlos, infligiendo daño significativo. Útil para despejar zonas o aplicar presión.' },
-            { src: 'assets/icons/raze/Paint.png',title:'Lanza una granada que se divide en submuniciones tras explotar, causando daño en un área amplia. Excelente para despejar esquinas y zonas de alta densidad enemiga.' },
-            { src: 'assets/icons/raze/Showstopper.png', title: 'Dispara un cohete de alto impacto que inflige daño masivo en un área. Ideal para eliminar múltiples enemigos o asegurar bajas cruciales.' }
+            { src: 'assets/icons/raze/Blast.png', title: 'Lanza un explosivo que puede detonar manualmente, empujando a enemigos o a Raze misma.' },
+            { src: 'assets/icons/raze/bot.png', title: 'Despliega un robot que busca enemigos cercanos y explota al alcanzarlos.' },
+            { src: 'assets/icons/raze/Paint.png',title:'Lanza una granada que se divide en submuniciones tras explotar, causando daño en un área amplia. ' },
+            { src: 'assets/icons/raze/Showstopper.png', title: 'Dispara un cohete de alto impacto que inflige daño masivo en un área.' }
         ]
     },
     {
@@ -81,7 +81,7 @@ const sliderData = [
             { src: 'assets/icons/neon/Fastlane.webp', title: 'Crea dos paredes de energía paralelas que bloquean la visión y causan daño a quienes las atraviesen.' },
             { src: 'assets/icons/neon/High.webp', title: 'Neon se mueve rápidamente durante un tiempo limitado, ganando agilidad para flanquear o escapar de situaciones peligrosas.' },
             { src: 'assets/icons/neon/Relay.webp',title:'Lanza un relámpago que rebota entre superficies y enemigos, infligiendo daño a múltiples objetivos.' },
-            { src: 'assets/icons/neon/Overdrive.webp', title: 'Neon canaliza un rayo de energía precisa que inflige daño constante. Mientras la habilidad está activa, Neon se mueve más rápido, y su precisión aumenta.' }
+            { src: 'assets/icons/neon/Overdrive.webp', title: 'Neon canaliza un rayo de energía precisa que inflige daño constante. Mientras la habilidad está activa, Neon se mueve más rápido.' }
         ]
     },
     {
@@ -102,10 +102,10 @@ const sliderData = [
         title: 'Gekko',
         text: 'Gekko es un iniciador en Valorant con un estilo de juego dinámico y centrado en el apoyo táctico. Sus habilidades únicas le permiten desorientar a los enemigos, limpiar áreas y mantener el control del campo de batalla con la ayuda de sus compañeros de equipo. Gekko se destaca por el uso estratégico de sus criaturas, que añaden una capa creativa a su gameplay.',
         gallery: [
-            { src: 'assets/icons/gekko/Mosh.webp', title: 'Lanza una bomba de Mosh, que se expande en un área amplia y explota después de un breve retraso, infligiendo un daño devastador.' },
-            { src: 'assets/icons/gekko/Dizzy.webp', title: 'Lanza a Dizzy, una criatura que vuela hacia adelante y dispara un rayo que ciega a los enemigos que lo miran. Después de usarlo, Dizzy regresa y puede ser recogido para reutilizarlo tras un breve tiempo. ' },
-            { src: 'assets/icons/gekko/wingman.webp',title:'Wingman corre hacia adelante buscando enemigos, aturdiendo al primer objetivo que encuentra. Alternativamente, si tienes la Spike, puedes usar Wingman para plantarla o desactivarla.' },
-            { src: 'assets/icons/gekko/Thrash.webp', title: 'Controlas a Thrash, una criatura que se lanza hacia adelante y explota, atrapando a los enemigos en un área pequeña por un corto período de tiempo. ' }
+            { src: 'assets/icons/gekko/Mosh.webp', title: 'Lanza una bomba de Mosh, que se expande en un área amplia y explota después de un breve retraso.' },
+            { src: 'assets/icons/gekko/Dizzy.webp', title: 'Lanza a Dizzy, una criatura que vuela hacia adelante y dispara un rayo que ciega a los enemigos que lo miran.' },
+            { src: 'assets/icons/gekko/Wingman.webp',title:'Wingman corre hacia adelante buscando enemigos, Alternativamente, puedes usar Wingman para plantarla o desactivarla.' },
+            { src: 'assets/icons/gekko/Thrash.webp', title: 'Controlas a Thrash, una criatura que se lanza hacia adelante y explota, atrapando a los enemigos.' }
         ]
     },
     {
@@ -117,7 +117,7 @@ const sliderData = [
             { src: 'assets/icons/viper/Snake.webp', title: 'Lanza una cápsula de veneno que al impactar crea un charco tóxico que inflige daño continuo a los enemigos en el área.' },
             { src: 'assets/icons/viper/Cloud.webp', title: 'Lanza un emisor de gas que puede reactivarse para crear una nube de veneno que bloquea la visión y daña a los enemigos que la atraviesan.' },
             { src: 'assets/icons/viper/Screen.webp',title:'Despliega una línea de emisores que pueden activarse para generar una barrera de gas tóxico. ' },
-            { src: 'assets/icons/viper/viperulti.webp', title: 'Crea una gran nube de gas tóxico que cubre un área amplia. Los enemigos dentro de la nube tienen visión reducida, reciben daño continuo y se vuelven vulnerables debido al decaimiento de su salud.' }
+            { src: 'assets/icons/viper/viperulti.webp', title: 'Crea una gran nube de gas tóxico que cubre un área amplia. Los enemigos dentro de la nube tienen visión reducida y reciben decaimiento,' }
         ]
     },
 ];
@@ -153,8 +153,8 @@ function updateSliderButtons() {
     sliderContainer.innerHTML = ''; 
     
     const totalItems = sliderData.length;
-    const visibleButtons = 18;
-    const startIndex = (currentIndex - 2 + totalItems) % totalItems;
+    const visibleButtons = 9;
+    const startIndex = (currentIndex - 4 + totalItems) % totalItems;
 
     for (let i = 0; i < visibleButtons; i++) {
         const buttonIndex = (startIndex + i) % totalItems;
@@ -223,6 +223,9 @@ function updateGallery() {
     });
 }
 
+
+// Inicializar el slider al cargar la página
+initializeSlider();
 
 // Inicializar el slider al cargar la página
 initializeSlider();
