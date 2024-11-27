@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página con Slider</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Armas</a></li>
+            <li><a href="#">Mapas</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido central -->
+    <div class="main-content">
+        <div class="image-text-container">
+            <!-- Imagen principal -->
+            <div class="image-container">
+                <img id="main-image" src="" alt="Imagen Central">
+            </div>
+            <!-- Texto principal -->
+            <div class="text-container">
+                <h2 id="main-title"></h2>
+                <p id="main-text"></p>
+                <p><strong>Algunos agentes recomendados son:</strong></p>
+                <!-- Galería de imágenes debajo del texto -->
+                <div class="image-row" id="image-row">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slider" id="slider">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
