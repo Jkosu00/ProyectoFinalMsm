@@ -18,10 +18,10 @@ const sliderData = [
         title: 'Omen',
         text: 'Omen es un controlador en Valorant que manipula sombras para confundir a los enemigos y dominar el campo de batalla. Su estilo de juego combina el sigilo, la movilidad y el control táctico, ideal para jugadores estratégicos.',
         gallery: [
-            { src: 'assets/icons/3/a.webp', title: 'Lanza una nube que bloquea la visión por corto tiempo.' },
-            { src: 'assets/icons/3/b.webp', title: 'Salta alto para ganar ventaja de posición.' },
-            { src: 'assets/icons/3/c.webp',title:'Se desliza rápidamente en la dirección apuntada.' },
-            { src: 'assets/icons/3/d.webp', title: 'lanza cuchillos precisos que se recargan al eliminar enemigos.' }
+            { src: 'assets/icons/2/a.png', title: 'Permite teletransportarse a una ubicación cercana' },
+            { src: 'assets/icons/2/b.png', title: 'Lanza un proyectil que reduce la visión y el sonido de los enemigos en su trayectoria.' },
+            { src: 'assets/icons/2/c.webp',title:'Proyecta orbes de sombra para bloquear líneas de visión.' },
+            { src: 'assets/icons/2/d.png', title: 'Teletransporta a Omen a cualquier lugar del mapa. Si es interrumpido, regresa al punto inicial.' }
         ]
     },
     {
@@ -30,10 +30,10 @@ const sliderData = [
         title: 'Jett',
         text: 'Jett es una duelista en Valorant que destaca por su movilidad inigualable y capacidad de eliminar enemigos rápidamente. Diseñada para un estilo de juego agresivo, Jett recompensa a jugadores con excelente puntería y reflejos rápidos.',
         gallery: [
-            { src: 'assets/icons/2/a.png', title: 'Permite teletransportarse a una ubicación cercana' },
-            { src: 'assets/icons/2/b.png', title: 'Lanza un proyectil que reduce la visión y el sonido de los enemigos en su trayectoria.' },
-            { src: 'assets/icons/2/c.webp',title:'Proyecta orbes de sombra para bloquear líneas de visión.' },
-            { src: 'assets/icons/2/d.png', title: 'Teletransporta a Omen a cualquier lugar del mapa. Si es interrumpido, regresa al punto inicial.' }
+            { src: 'assets/icons/3/a.webp', title: 'Lanza una nube que bloquea la visión por corto tiempo.' },
+            { src: 'assets/icons/3/b.webp', title: 'Salta alto para ganar ventaja de posición.' },
+            { src: 'assets/icons/3/c.webp',title:'Se desliza rápidamente en la dirección apuntada.' },
+            { src: 'assets/icons/3/d.webp', title: 'lanza cuchillos precisos que se recargan al eliminar enemigos.' }
         ]
     },
     {
